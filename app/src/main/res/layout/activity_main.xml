@@ -26,8 +26,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pokemonimage" />
 
-    <EditText
-        android:id="@+id/enterPokemonName"
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextViewEnterPokemonName"
         android:layout_width="219dp"
         android:layout_height="43dp"
         android:layout_marginStart="52dp"
@@ -38,12 +39,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+
     <ImageView
         android:id="@+id/pokemonImage"
         android:layout_width="104dp"
         android:layout_height="97dp"
-        android:layout_marginTop="51dp"
-        app:layout_constraintTop_toBottomOf="@+id/enterPokemonName"
+        android:layout_marginTop="56dp"
+        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextViewEnterPokemonName"
         tools:layout_editor_absoluteX="153dp"
         tools:srcCompat="@tools:sample/avatars" />
 
@@ -86,5 +88,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pokemonName" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
