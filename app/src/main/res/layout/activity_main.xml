@@ -28,7 +28,7 @@
 
 
     <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextViewEnterPokemonName"
+        android:id="@+id/autoCompleteTextViewPokemonName"
         android:layout_width="219dp"
         android:layout_height="43dp"
         android:layout_marginStart="52dp"
@@ -44,9 +44,10 @@
         android:id="@+id/pokemonImage"
         android:layout_width="104dp"
         android:layout_height="97dp"
-        android:layout_marginTop="56dp"
-        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextViewEnterPokemonName"
-        tools:layout_editor_absoluteX="153dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextViewPokemonName"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -55,6 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
@@ -65,6 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pokemonHeight" />
@@ -75,6 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pokemonType" />
@@ -85,6 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pokemonName" />

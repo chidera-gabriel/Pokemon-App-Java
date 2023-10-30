@@ -1,6 +1,9 @@
 package com.example.pokemonapp.retrofit;
 
 import com.example.pokemonapp.models.PokemonDetails;
+import com.example.pokemonapp.models.PokemonListResponse;
+import com.example.pokemonapp.models.PokemonNameResponse;
+
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -18,6 +21,6 @@ public interface RetrofitApi {
                                              @Query("offset") int offset);
 
     // API call to get details for an individual Pokemon by name
-    @GET("pokemon/{name}")
+    @GET("api/v2/pokemon/{name}")
     Call<PokemonDetails> getPokemonDetails(@Path("name") String name);
 }
