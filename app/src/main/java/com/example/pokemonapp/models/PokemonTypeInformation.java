@@ -11,5 +11,4 @@ public class PokemonTypeInformation {
     public PokemonTypeInformation(String name) {
         this.name = name;
     }
-
 }

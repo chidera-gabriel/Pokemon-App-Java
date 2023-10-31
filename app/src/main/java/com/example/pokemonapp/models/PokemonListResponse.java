@@ -4,14 +4,14 @@ import java.util.List;
 
 public class PokemonListResponse {
 
-    private List<PokemonListItem> outcome;
+    List<PokemonListItem> results;
 
-    public PokemonListResponse(List<PokemonListItem> outcome) {
+    public PokemonListResponse(List<PokemonListItem> results) {
 
-        this.outcome = outcome;
+        this.results = results;
     }
 
-    public List<PokemonListItem> getOutcome() {
-        return outcome;
+    public List<PokemonListItem> getResults() {
+        return results;
     }
 }

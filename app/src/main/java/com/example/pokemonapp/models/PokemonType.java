@@ -2,18 +2,14 @@ package com.example.pokemonapp.models;
 
 public class PokemonType {
 
-    PokemonTypeInformation typeInformation;
+    PokemonTypeInformation type;
 
-    public PokemonType(PokemonTypeInformation typeInformation) {
-        this.typeInformation = typeInformation;
+    public PokemonType(PokemonTypeInformation type) {
+        this.type = type;
     }
 
-    public PokemonTypeInformation geTypeInformation() {
-        return typeInformation;
+    public PokemonTypeInformation getType() {
+        return type;
     }
-
-
-
-
 
 }

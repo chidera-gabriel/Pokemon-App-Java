@@ -47,8 +47,7 @@
         android:layout_marginStart="152dp"
         android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextViewPokemonName"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextViewPokemonName" />
 
     <TextView
         android:id="@+id/pokemonName"
