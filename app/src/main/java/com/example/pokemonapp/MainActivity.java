@@ -12,6 +12,8 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 import retrofit2.Call;
@@ -81,15 +83,29 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String selectedPokemonName = autoCompleteTextView.getText().toString();
 
-                // Make an API request to fetch Pokemon details
-                callPokemonDetails(selectedPokemonName);
+                // Check if the user has entered a Pokemon name
+                if (!selectedPokemonName.isEmpty()) {
+                    // Make an API request to fetch Pokemon details
+                    callPokemonDetails(selectedPokemonName);
 
-                // Change the visibility of elements to visible
-                pokemonImageView.setVisibility(View.VISIBLE);
-                pokemonNameTextView.setVisibility(View.VISIBLE);
-                pokemonTypeTextView.setVisibility(View.VISIBLE);
-                pokemonHeightTextView.setVisibility(View.VISIBLE);
-                pokemonWeightTextView.setVisibility(View.VISIBLE);
+                    // Change the visibility of elements to visible
+                    pokemonImageView.setVisibility(View.VISIBLE);
+                    pokemonNameTextView.setVisibility(View.VISIBLE);
+                    pokemonTypeTextView.setVisibility(View.VISIBLE);
+                    pokemonHeightTextView.setVisibility(View.VISIBLE);
+                    pokemonWeightTextView.setVisibility(View.VISIBLE);
+                } else {
+                    // Display a message to enter a pokemon name
+                    Toast.makeText(MainActivity.this, "Please enter a Pokemon name", Toast.LENGTH_SHORT).show();
+
+                    // Handle the case where the AutoCompleteTextView is empty
+                    // If user don't enter a pokemon name else statement will trigger.
+                    pokemonImageView.setVisibility(View.GONE);
+                    pokemonNameTextView.setVisibility(View.GONE);
+                    pokemonTypeTextView.setVisibility(View.GONE);
+                    pokemonHeightTextView.setVisibility(View.GONE);
+                    pokemonWeightTextView.setVisibility(View.GONE);
+                }
             }
         });
     }
